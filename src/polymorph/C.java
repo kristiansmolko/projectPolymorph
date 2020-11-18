@@ -8,6 +8,16 @@ public class C extends B{
 
     @Override
     public void print(){
+        super.print();
         System.out.println("Class C: print()");
+    }
+
+    public void day(){
+        System.out.println("Monday");
+    }
+
+    @Override
+    public void drink() {
+        System.out.println("Fanta mango");
     }
 }
