@@ -13,14 +13,20 @@ public class Main {
         Random random = new Random();
 
         for (int i = 0; i < length; i++){
-            int num = random.nextInt(100);
-            if (num%2==1){
-                --i;
-                continue;
-            }
-            field.add(num);
-            System.out.print(field.get(i)+" ");
+            field.add(random.nextInt(100));
         }
+
+        System.out.println();
+        System.out.println(field);
+        for (int i = 0; i < field.size(); i++){
+            if ((field.get(i)%2)==0){
+                field.remove(i);
+                length--;
+                i--;
+            }
+        }
+        System.out.println(field);
+
 
         int i = 0;
         int max = 0;
