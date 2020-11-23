@@ -3,9 +3,9 @@ package stack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StackE{
+public class StackE<T>{
     private int capacity;
-    private List<Integer> array;
+    private List<T> array;
 
     public StackE(int capacity){
         this.capacity = capacity;
@@ -28,7 +28,7 @@ public class StackE{
         return capacity==array.size();
     }
 
-    public void push(int value){
+    public void push(T value){
         if (isFull())
             System.out.println("Stack is full");
         else
@@ -42,16 +42,16 @@ public class StackE{
             array.remove(array.size()-1);
     }
 
-    public int top(){
+    public T top(){
         if (isEmpty()){
             System.out.println("Stack is empty");
-            return 0;}
+            return null;}
         else
             return array.get(array.size()-1);
     }
 
     public void print(){
-        for (Integer t : array)
+        for (T t : array)
             System.out.print(t + "  ");
         System.out.println();
     }
