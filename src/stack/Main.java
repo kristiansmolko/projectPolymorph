@@ -10,6 +10,17 @@ public class Main {
         zac.pop();
         zac.print();
 
-        StackE<String> uniZac = new StackE<>(5);
+        Queue<String> stringQ = new Queue<>(5);
+        stringQ.enqueue("Prvy");
+        stringQ.enqueue("Druhy");
+        stringQ.enqueue("Treti");
+        stringQ.enqueue("Stvrty");
+        stringQ.enqueue("Piaty");
+        stringQ.dequeue();
+        stringQ.print();
+        stringQ.enqueue("Ano");
+        stringQ.print();
+        System.out.println(stringQ.front());
+
     }
 }
