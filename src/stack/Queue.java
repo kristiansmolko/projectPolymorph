@@ -28,24 +28,24 @@ public class Queue<T> {
         return capacity == array.size();
     }
 
-    public void enqueue(T value){
+    public void enqueue(T value) throws QueueException{
         if (isFull())
-            System.out.println("\033[31mQueue is full!\033[0m");
+            throw new QueueException("Queue is full");
         else
             array.add(value);
     }
 
-    public void dequeue(){
+    public void dequeue() throws QueueException {
         if (isEmpty())
-            System.out.println("\033[31mQueue is empty!\033[0m");
+            throw new QueueException("Queue is empty");
         else
             array.remove(array.size()-capacity);
     }
 
-    public T front(){
+    public T front() throws QueueException{
         if (isEmpty()){
-            System.out.println("\033[31mQueue is empty!\033[0m");
-            return null;}
+            throw new QueueException("Queue is empty");
+            }
         else
             return array.get(0);
     }

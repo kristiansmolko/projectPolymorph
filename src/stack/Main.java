@@ -2,7 +2,7 @@ package stack;
 
 public class Main {
     public static void main(String[] args) {
-        StackE<Integer> zac = new StackE(4);
+       /* StackE<Integer> zac = new StackE(4);
         try {
             zac.push(16);
             zac.push(16);
@@ -14,19 +14,23 @@ public class Main {
             zac.print();
         }catch(StackException ex){
             ex.printStackTrace();
-        }
-/*
+        }*/
+
         Queue<String> stringQ = new Queue<>(5);
+        try {
             stringQ.enqueue("Prvy");
             stringQ.enqueue("Druhy");
             stringQ.enqueue("Treti");
             stringQ.enqueue("Stvrty");
             stringQ.enqueue("Piaty");
+            stringQ.enqueue("Piaty");
             stringQ.dequeue();
             stringQ.print();
             stringQ.enqueue("Ano");
             stringQ.print();
-            System.out.println(stringQ.front());*/
-
+            System.out.println(stringQ.front());
+        }catch(QueueException ex){
+            ex.printStackTrace();
+        }
     }
 }
