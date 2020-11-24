@@ -28,24 +28,24 @@ public class StackE<T>{
         return capacity==array.size();
     }
 
-    public void push(T value){
+    public void push(T value) throws StackException {
         if (isFull())
-            System.out.println("Stack is full");
+            throw new StackException("Stack is full");
         else
             array.add(value);
     }
 
-    public void pop(){
+    public void pop() throws StackException {
         if (isEmpty())
-            System.out.println("Stack is empty");
+            throw new StackException("Stack if empty");
         else
             array.remove(array.size()-1);
     }
 
-    public T top(){
+    public T top() throws StackException {
         if (isEmpty()){
-            System.out.println("Stack is empty");
-            return null;}
+            throw new StackException("Stack is empty");
+        }
         else
             return array.get(array.size()-1);
     }
